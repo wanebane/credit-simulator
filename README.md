@@ -9,7 +9,6 @@ Aplikasi simulasi kredit kendaraan (Mobil & Motor) berbasis **Java 21** dan **Sp
 - **Dual-Mode Execution**:
     - **REST API**: Menyediakan endpoint HTTP JSON yang aktif di port `8082`.
     - **CLI Mode**: Membaca parameter dari file `.txt` lokal via argument dan mencetak tabel hasil simulasi yang dinamis di terminal.
-- **Kalkulasi Akurat & Presisi**: Seluruh kalkulasi nominal uang menggunakan `BigDecimal` untuk menghindari isu *floating-point rounding error*.
 - **Aturan Suku Bunga**:
     - Tahun 1: Bunga dasar (*base rate*) sesuai jenis & kondisi kendaraan.
     - Tahun Genap (>1): Bunga bertambah **+0.1%**.
