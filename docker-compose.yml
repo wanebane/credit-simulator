@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  credit-simulator-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: credit-simulator-service
+    ports:
+      - "8082:8082"
+    environment:
+      - PORT=8082
+    restart: always

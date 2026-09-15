@@ -1,0 +1,6 @@
+vehicleType=Motor
+vehicleCondition=Bekas
+vehicleYear=2023
+totalLoanAmount=100000000
+loanTenure=6
+downPayment=25000000

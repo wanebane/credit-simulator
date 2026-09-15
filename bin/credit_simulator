@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIR="$( dirname "$SCRIPT_DIR" )"
+
+JAR_FILE="$PROJECT_DIR/target/credit-simulator-0.0.1-SNAPSHOT.jar"
+DEFAULT_INPUT="$PROJECT_DIR/input-file/sample-input-motor1.txt"
+
+# Build project
+if [ ! -f "$JAR_FILE" ]; then
+    echo "Building project first..."
+    mvn -f "$PROJECT_DIR/pom.xml" clean package -DskipTests > /dev/null 2>&1
+fi
+
+INPUT_FILE="${1:-$DEFAULT_INPUT}"
+
+java -jar "$JAR_FILE" "$INPUT_FILE"
